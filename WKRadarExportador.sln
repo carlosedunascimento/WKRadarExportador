@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WKRadarExportador", "WKRadarExportador.csproj", "{BAE01701-D7CE-4408-A61D-06E89515DD00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAE01701-D7CE-4408-A61D-06E89515DD00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE01701-D7CE-4408-A61D-06E89515DD00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE01701-D7CE-4408-A61D-06E89515DD00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE01701-D7CE-4408-A61D-06E89515DD00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4891D7DD-C4EB-4CFB-B9A1-E749E7D3E355}
+	EndGlobalSection
+EndGlobal
