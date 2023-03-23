@@ -10,3 +10,6 @@ Preencha COM ATENÇÃO ao campo diretório de DESTINO, para evitar que ele sobre
 Acho que nem preciso recomendar que faça um backup antes, ou realize o procedimento em outros diretórios e/ou outro computador.
 
 Decidi fazer essa contribuição devido à uma necessidade antiga de programadores e clientes desta empresa que praticamente escolheu "reinventar a roda", tendo em vista a existência de várias opções servidores de bancos de dados pagos e gratuitos premiados e utilizados internacionalmente por pequenas à grandes empresas.
+
+- Microsoft Visual Studio 2022
+- Microsoft .NET Framework V4.8
