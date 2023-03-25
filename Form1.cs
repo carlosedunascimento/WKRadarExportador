@@ -1,27 +1,19 @@
 ﻿using System;
 using System.IO;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WKRadarExportador
 {
     public partial class Form1 : Form
     {
+        private string ultimoDiretorio = string.Empty;
         public Form1()
         {
-            InitializeComponent();  
+            InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string diretorioOrigem = "C:/Temp/TRANSPORTES/";
-            string diretorioDestino = "C:/Temp/WKRADAR_SAIDA/";
-
             if (String.IsNullOrEmpty(txtDiretorioOrigem.Text)) {
                 MessageBox.Show("Diretório de ORIGEM não informado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -45,22 +37,24 @@ namespace WKRadarExportador
 
         private void txtDiretorioOrigem_Click(object sender, EventArgs e)
         {
+            this.ultimoDiretorio = (ultimoDiretorio == string.Empty ? Directory.GetCurrentDirectory() : ultimoDiretorio);
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
-                folderDialog.SelectedPath = Directory.GetCurrentDirectory();
-                if (folderDialog.ShowDialog() == DialogResult.OK)
-                {
+                folderDialog.SelectedPath = this.ultimoDiretorio;
+                if (folderDialog.ShowDialog() == DialogResult.OK) {
+                    this.ultimoDiretorio = folderDialog.SelectedPath;
                     txtDiretorioOrigem.Text = folderDialog.SelectedPath;
                 }
             }
         }
         private void txtDiretorioDestino_Click(object sender, EventArgs e)
         {
+            this.ultimoDiretorio = (ultimoDiretorio == string.Empty ? Directory.GetCurrentDirectory() : ultimoDiretorio);
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
-                folderDialog.SelectedPath = Directory.GetCurrentDirectory();
-                if (folderDialog.ShowDialog() == DialogResult.OK)
-                {
+                folderDialog.SelectedPath = this.ultimoDiretorio;
+                if (folderDialog.ShowDialog() == DialogResult.OK) {
+                    this.ultimoDiretorio = folderDialog.SelectedPath;
                     txtDiretorioDestino.Text = folderDialog.SelectedPath;
                 }
             }

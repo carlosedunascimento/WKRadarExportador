@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Text;
+using System.IO;
 using WK;
 
 namespace WKRadarExportador
@@ -40,7 +41,8 @@ namespace WKRadarExportador
             byte[] buffer = new byte[num];
             xmlFileStream.Read(buffer, 0, num);
             string conteudo = this.Read(ref buffer);
-            File.WriteAllText(arquivoDestino, conteudo);
+            conteudo = conteudo.Replace("\"utf-7\"", "\"utf-8\"");
+            File.WriteAllText(arquivoDestino, conteudo, Encoding.UTF8);
         }
 
         internal unsafe string Read(ref byte[] buffer)
